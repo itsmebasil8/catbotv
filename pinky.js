@@ -1,1 +1,0 @@
-🌝enthada pinky uyir
