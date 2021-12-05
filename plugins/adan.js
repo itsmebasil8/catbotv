@@ -1,5 +1,5 @@
 /* Codded by @mrclfd // rapiUp
-PINKY V2 :)
+Catbot :)
 */
 
 const Asena = require('../events');
