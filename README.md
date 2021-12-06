@@ -1,17 +1,17 @@
-## Thanks for Everything 
-### We will always remember you..
+## Thanks for all❤️ 
+### This is our catbot..
 
 <div align="center">
-  <img border-radius: 15px src="https://i.imgur.com/TqCHb2w.jpg" width="200" height="200"/>
+  <img border-radius: 15px src="https://i.imgur.com/h0S3Z4D.png" width="200" height="200"/>
   <p align="center">
-<a href="#"><img title="CATBOT" src="https://img.shields.io/badge/afnanplk-pink?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
+<a href="#"><img title="CATBOT" src="https://img.shields.io/badge/Basilser-red?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
   <p align="center">
-<a href="https://github.com/afnanplk"><img title="Author" src="https://img.shields.io/badge/Author-afnanplk/pinkymwol?color=black&style=for-the-badge&logo=whatsapp"></a>
+<a href="https://github.com/itsmebasil0"><img title="Author" src="https://img.shields.io/badge/Author-itsmebasil0/catbots?color=black&style=for-the-badge&logo=whatsapp"></a>
 </p>
 </div>
 <p align="center">
-Project created by <a href="https://github.com/afnanplk">afnanplk</a> to make it public
+Project created by <a href="https://github.com/itsmebasil0">basilser</a> to make it public
     <br>
        | © |
         Reserved |
@@ -21,7 +21,7 @@ Project created by <a href="https://github.com/afnanplk">afnanplk</a> to make it
 ----
 
   <p align="center">
-  <a href="https://github.com/afnanplk/pinkymwol ">
+  <a href="https://github.com/itsmebasil0/catbots ">
     <img src="https://img.shields.io/github/repo-size/itsmebasil8/catbotv?color=green&label=Repo%20total%20size&style=plastic">
 <p align="center">
 <a href="https://github.com/afnanplk/followers"><img title="Followers" src="https://img.shields.io/github/followers/afnanplk?color=red&style=flat-circle"></a>
@@ -84,15 +84,13 @@ Absolutely, Asena executives do not accept responsibility.
 By establishing the Asena, you are deemed to have accepted these responsibilities.
 ```
   
-## Developers
+## Developer one and only 
   <div align="center">
     
-  [![Farhan-Dqz](https://github.com/farhan-dqz.png?size=100)](https://github.com/farhan-dqz) |  [![TOXIC4L!3N](https://github.com/Alien-alfa.png?size=100)](https://github.com/AI-VIKI) | [![afnanplk](https://github.com/afnanplk.png?size=100)](https://github.com/afnanplk) 
-----|----|----
-[farhan-dqz](https://github.com/farhan-dqz)  | [TOXIC4L!3N](https://github.com/AI-VIKI) | [afnanplk](https://github.com/afnanplk)
-Base, Bug Fixes, Modules | Modifiying  as   public | Bug Fixes, Modules
-  </div>
-
+  [![Basilser](https://github.com/itsmebasil0.png?size=100)](https://github.com/itsmebasil0) |   
+----|
+[Basilser](https://github.com/itsmebasil0)  | 
+Base, Bug Fixes, Modules | Modifiying  as   public
 
 ## License
 This project is protected by `GNU General Public Licence v3.0` license.
