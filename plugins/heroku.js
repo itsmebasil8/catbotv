@@ -2,10 +2,10 @@
 Heroku plugin for WhatsAsena - W4RR10R
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-WhatsAsena - Yusuf Usta 
+WhatsAsena - Yusuf Usta
 */
 
-const catbot = require('../events');
+const Asena = require('../events');
 const Config = require('../config');
 const Heroku = require('heroku-client');
 const {secondsToHms} = require('./afk');
@@ -23,8 +23,8 @@ const heroku = new Heroku({
 
 
 let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
-if (Config.STANDPLK == 'off' || Config.STANDPLK == 'OFF') {
-catbot.addCommand({pattern: 'degis ?(.*)', fromMe: true, dontAddCommandList: true, desc: Lang.DEGİS_DESC}, (async (message, match) => {
+
+Asena.addCommand({pattern: 'degis ?(.*)', fromMe: true, desc: Lang.DEGİS_DESC}, (async (message, match) => {
 
     if (match[1] == '') {
         return await message.client.sendMessage(message.jid, Lang.DEGİS_NONE, MessageType.text); 
@@ -158,7 +158,7 @@ catbot.addCommand({pattern: 'degis ?(.*)', fromMe: true, dontAddCommandList: tru
 }));
 
 
-catbot.addCommand({pattern: 'restart$', fromMe: true, dontAddCommandList: true, desc: Lang.RESTART_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'restart$', fromMe: true, desc: Lang.RESTART_DESC}, (async (message, match) => {
 
     await message.client.sendMessage(message.jid,Lang.RESTART_MSG, MessageType.text);
     console.log(baseURI);
@@ -167,7 +167,7 @@ catbot.addCommand({pattern: 'restart$', fromMe: true, dontAddCommandList: true, 
     });
 }));
 
-catbot.addCommand({pattern: 'shutdown$', fromMe: true, dontAddCommandList: true, desc: Lang.SHUTDOWN_DESC}, (async(message, match) => {
+Asena.addCommand({pattern: 'shutdown$', fromMe: true, desc: Lang.SHUTDOWN_DESC}, (async(message, match) => {
 
     await heroku.get(baseURI + '/formation').then(async (formation) => {
         forID = formation[0].id;
@@ -185,7 +185,7 @@ catbot.addCommand({pattern: 'shutdown$', fromMe: true, dontAddCommandList: true,
 
 if (Config.WORKTYPE == 'private') {
 
-    catbot.addCommand({pattern: 'dyno$', fromMe: true, dontAddCommandList: true, desc: Lang.DYNO_DESC}, (async (message, match) => {
+    Asena.addCommand({pattern: 'dyno$', fromMe: true, desc: Lang.DYNO_DESC}, (async (message, match) => {
 
         heroku.get('/account').then(async (account) => {
             // have encountered some issues while calling this API via heroku-client
@@ -218,7 +218,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    catbot.addCommand({pattern: 'dyno$', fromMe: false, dontAddCommandList: true, desc: Lang.DYNO_DESC}, (async (message, match) => {
+    Asena.addCommand({pattern: 'dyno$', fromMe: false, desc: Lang.DYNO_DESC}, (async (message, match) => {
 
         heroku.get('/account').then(async (account) => {
             // have encountered some issues while calling this API via heroku-client
@@ -250,9 +250,9 @@ else if (Config.WORKTYPE == 'public') {
     }));
 }
 
-catbot.addCommand({pattern: 'setvar ?(.*)', fromMe: true, dontAddCommandList: true, desc: Lang.SETVAR_DESC}, (async(message, match) => {
+Asena.addCommand({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}, (async(message, match) => {
 
-    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.KEY_VAL_MISSING2, MessageType.text);
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.KEY_VAL_MISSING, MessageType.text);
 
     // ================================================== CONFIG SCANNER ==================================================
     if (match[1] == 'SEND_READ: true' || match[1] == 'SEND_READ: True' || match[1] == 'SEND_READ: TRUE' || match[1] == 'SEND_READ:True' || match[1] == 'SEND_READ:TRUE' || match[1] == 'SEND_READ:ture' || match[1] == 'SEND_READ: ture' || match[1] == 'SEND_READ:ttue' || match[1] == 'SEND_READ:trie' || match[1] == 'SEND_READ: trie' || match[1] == 'SEND_READ:Trie' || match[1] == 'SEND_READ: Trie') {
@@ -407,7 +407,7 @@ catbot.addCommand({pattern: 'setvar ?(.*)', fromMe: true, dontAddCommandList: tr
             });
         }
     }
-    if (match[1] == 'NO_ONLİNE: false' || match[1] == 'NO_ONLİNE: False' || match[1] == 'NO_ONLİNE: FALSE' || match[1] == 'NO_ONLİNE:False' || match[1] == 'NO_ONLİNE:FALSE' || match[1] == 'NO_ONLİNE:fakse' || match[1] == 'NO_ONLİNE: fakse' || match[1] == 'NO_ONLİNE:falde' || match[1] == 'NO_ONLİNE: falde' || match[1] == 'NO_ONLİNE:flase' || match[1] == 'NO_ONLİNE:Flase' || match[1] == 'NO_ONLİNE: flase') {
+    if (match[1] == 'NO_ONLINE: false' || match[1] == 'NO_ONLINE: False' || match[1] == 'NO_ONLINE: FALSE' || match[1] == 'NO_ONLINE:False' || match[1] == 'NO_ONLINE:FALSE' || match[1] == 'NO_ONLINE:fakse' || match[1] == 'NO_ONLINE: fakse' || match[1] == 'NO_ONLINE:falde' || match[1] == 'NO_ONLINE: falde' || match[1] == 'NO_ONLINE:flase' || match[1] == 'NO_ONLINE:Flase' || match[1] == 'NO_ONLINE: flase') {
 
         if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
             await message.client.sendMessage(
@@ -417,7 +417,7 @@ catbot.addCommand({pattern: 'setvar ?(.*)', fromMe: true, dontAddCommandList: tr
             );
             return await heroku.patch(baseURI + '/config-vars', {
                 body: {
-                    ['NO_ONLİNE']: 'false'
+                    ['NO_ONLINE']: 'false'
                 }
             });
         }
@@ -429,12 +429,12 @@ catbot.addCommand({pattern: 'setvar ?(.*)', fromMe: true, dontAddCommandList: tr
             );
             return await heroku.patch(baseURI + '/config-vars', {
                 body: {
-                    ['NO_ONLİNE']: 'false'
+                    ['NO_ONLINE']: 'false'
                 }
             });
         }
     }
-    if (match[1] == 'NO_ONLİNE: true' || match[1] == 'NO_ONLİNE: True' || match[1] == 'NO_ONLİNE: TRUE' || match[1] == 'NO_ONLİNE:True' || match[1] == 'NO_ONLİNE:TRUE' || match[1] == 'NO_ONLİNE:ture' || match[1] == 'NO_ONLİNE: ture' || match[1] == 'NO_ONLİNE:ttue' || match[1] == 'NO_ONLİNE:trie' || match[1] == 'NO_ONLİNE: trie' || match[1] == 'NO_ONLİNE:Trie' || match[1] == 'NO_ONLİNE: Trie') {
+    if (match[1] == 'NO_ONLINE: true' || match[1] == 'NO_ONLINE: True' || match[1] == 'NO_ONLINE: TRUE' || match[1] == 'NO_ONLINE:True' || match[1] == 'NO_ONLINE:TRUE' || match[1] == 'NO_ONLINE:ture' || match[1] == 'NO_ONLINE: ture' || match[1] == 'NO_ONLINE:ttue' || match[1] == 'NO_ONLINE:trie' || match[1] == 'NO_ONLINE: trie' || match[1] == 'NO_ONLINE:Trie' || match[1] == 'NO_ONLINE: Trie') {
 
         if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
             await message.client.sendMessage(
@@ -444,7 +444,7 @@ catbot.addCommand({pattern: 'setvar ?(.*)', fromMe: true, dontAddCommandList: tr
             );
             return await heroku.patch(baseURI + '/config-vars', {
                 body: {
-                    ['NO_ONLİNE']: 'true'
+                    ['NO_ONLINE']: 'true'
                 }
             });
         }
@@ -456,7 +456,7 @@ catbot.addCommand({pattern: 'setvar ?(.*)', fromMe: true, dontAddCommandList: tr
             );
             return await heroku.patch(baseURI + '/config-vars', {
                 body: {
-                    ['NO_ONLİNE']: 'true'
+                    ['NO_ONLINE']: 'true'
                 }
             });
         }
@@ -666,7 +666,7 @@ catbot.addCommand({pattern: 'setvar ?(.*)', fromMe: true, dontAddCommandList: tr
 }));
 
 
-catbot.addCommand({pattern: 'delvar ?(.*)', fromMe: true, dontAddCommandList: true, desc: Lang.DELVAR_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'delvar ?(.*)', fromMe: true, desc: Lang.DELVAR_DESC}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.KEY_VAL_MISSING, MessageType.text);
     await heroku.get(baseURI + '/config-vars').then(async (vars) => {
@@ -688,7 +688,7 @@ catbot.addCommand({pattern: 'delvar ?(.*)', fromMe: true, dontAddCommandList: tr
 
 }));
 
-catbot.addCommand({pattern: 'getvar ?(.*)', fromMe: true, dontAddCommandList: true, desc: Lang.GETVAR_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'getvar ?(.*)', fromMe: true, desc: Lang.GETVAR_DESC}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.KEY_VAL_MISSING, MessageType.text);
     await heroku.get(baseURI + '/config-vars').then(async (vars) => {
@@ -700,4 +700,3 @@ catbot.addCommand({pattern: 'getvar ?(.*)', fromMe: true, dontAddCommandList: tr
         await message.client.sendMessage(message.jid,error.message, MessageType.text);
     });
 }));
-}
