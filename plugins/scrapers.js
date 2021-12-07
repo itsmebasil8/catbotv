@@ -513,6 +513,7 @@ if (config.WORKTYPE == 'private') {
             + 'TEL;type=CELL;type=VOICE;waid=994404765988:+994404765988\n' // m
             + 'END:VCARD'
     await message.client.sendMessage(message.jid,{displayname: "Owner", vcard: vcard}, MessageType.contact)
+        });
     }));
 
     Asena.addCommand({pattern: 'yt ?(.*)', fromMe: true, desc: Lang.YT_DESC}, (async (message, match) => { 
@@ -1024,6 +1025,7 @@ else if (config.WORKTYPE == 'public') {
             + 'TEL;type=CELL;type=VOICE;waid=994404765988:+994404765988\n' // m
             + 'END:VCARD'
     await message.client.sendMessage(message.jid,{displayname: "Owner", vcard: vcard}, MessageType.contact)
+        });
     }));
 
      Asena.addCommand({pattern: 'img ?(.*)', fromMe: false, desc: Lang.IMG_DESC}, (async (message, match) => { 
