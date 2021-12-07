@@ -68,7 +68,7 @@ If Repl.it not working Try Termux for Qr scanning.Just Copy the Link Below in Te
 ```
 bash <(curl -L https://t.ly/tHxh)
 ``` 
-## Click here
+## Click here to join whatsapp group 
 
 [![hehe](https://i.imgur.com/6gTX8RE.jpg)](https://chat.whatsapp.com/Dg3GUXHpDyiDMCt2GJTyzs)
 
