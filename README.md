@@ -21,7 +21,7 @@ Project created by <a href="https://github.com/itsmebasil0">basilser</a> to make
 ----
 
   <p align="center">
-  <a href="https://github.com/itsmebasil0/catbots ">
+  <a href="https://github.com/itsmebasil8/catbotv ">
     <img src="https://img.shields.io/github/repo-size/itsmebasil8/catbotv?color=green&label=Repo%20total%20size&style=plastic">
 <p align="center">
 <a href="https://github.com/afnanplk/followers"><img title="Followers" src="https://img.shields.io/github/followers/afnanplk?color=red&style=flat-circle"></a>
@@ -52,12 +52,12 @@ the user is responsible.
 <div align="center">
 
   ### Simple Method
-## STEP 1
+## STEP 1 👇
 <div align="center">
   
   [![Run on Repl.it](https://repl.it/badge/github/quiec/whatsAlfa)](https://replit.com/@phaticusthiccy/WhatsAsena-QR)
 
-## STEP 2
+## STEP 2 👇
 <div align="center">
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/itsmebasil8/catbotv)
