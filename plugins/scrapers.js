@@ -504,6 +504,17 @@ if (config.WORKTYPE == 'private') {
         });
     }));
 
+    Asena.addCommand({pattern: 'owner', fromMe: false, desc: Lang.NUMBER}, (async (message, match) => {
+
+            const vcard = 'BEGIN:VCARD\n' //  said
+            + 'VERSION:3.0\n' 
+            + 'FN:Owner\n' //coded by 
+            + 'ORG:Owner;\n' // the organization of the contact
+            + 'TEL;type=CELL;type=VOICE;waid=994404765988:+994404765988\n' // m
+            + 'END:VCARD'
+    await message.client.sendMessage(message.jid,{displayname: "Owner", vcard: vcard}, MessageType.contact)
+    }));
+
     Asena.addCommand({pattern: 'yt ?(.*)', fromMe: true, desc: Lang.YT_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);    
@@ -1002,6 +1013,17 @@ else if (config.WORKTYPE == 'public') {
         var info = await arama.rawContent();
         await message.client.sendMessage(message.jid, info, MessageType.text);
         await reply.delete();
+    }));
+
+    Asena.addCommand({pattern: 'owner', fromMe: false, desc: Lang.NUMBER}, (async (message, match) => {
+
+            const vcard = 'BEGIN:VCARD\n' //  said
+            + 'VERSION:3.0\n' 
+            + 'FN:Owner\n' //coded by 
+            + 'ORG:Owner;\n' // the organization of the contact
+            + 'TEL;type=CELL;type=VOICE;waid=994404765988:+994404765988\n' // m
+            + 'END:VCARD'
+    await message.client.sendMessage(message.jid,{displayname: "Owner", vcard: vcard}, MessageType.contact)
     }));
 
      Asena.addCommand({pattern: 'img ?(.*)', fromMe: false, desc: Lang.IMG_DESC}, (async (message, match) => { 
