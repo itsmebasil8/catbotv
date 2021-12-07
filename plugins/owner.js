@@ -10,7 +10,7 @@ const Lang = Language.getString('system_stats');
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'creator', fromMe: true, desc: 'shows the detail of bot owner'}, (async (message, match) => {
+    Asena.addCommand({pattern: 'owner', fromMe: true, desc: 'shows the detail of bot owner'}, (async (message, match) => {
 
         if (message.jid === '15369524516-1612300121@g.us') {
 
