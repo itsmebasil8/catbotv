@@ -14,7 +14,7 @@ const Lang = Language.getString('weather');
 if (Config.WORKTYPE == 'private') {
 	
 Asena.addCommand({pattern: 'device ?(.*)', fromMe: true, desc: Lang.DEVICE , dontAddCommandList: true }, async (message, match) => {
-	const url = 
+	const url = `https://docs-jojo.herokuapp.com/api/gsm_arena?q=${match[1]}`;
 	try {
 		const response = await got(url);
     
@@ -30,7 +30,7 @@ Asena.addCommand({pattern: 'device ?(.*)', fromMe: true, desc: Lang.DEVICE , don
 else if (Config.WORKTYPE == 'public') {
 	
 Asena.addCommand({pattern: 'device ?(.*)', fromMe: false, desc: Lang.DEVICE , dontAddCommandList: true }, async (message, match) => {
-	const url = `https://docs-jojo.herokuapp.com/api/gsm_arena?q=${match[1]}`;
+	const url = 
 	try {
 		const response = await got(url);
     
@@ -58,7 +58,7 @@ Asena.addCommand({pattern: 'device ?(.*)', fromMe: false, desc: Lang.DEVICE , do
             await message.client.sendMessage(message.jid,'CATBOT CREATED BY *BASILSER*' , MessageType.text);
         }
         else {
-            await message.client.sendMessage(message.jid,basilser + '\n\n---------------------', MessageType.text);
+            await message.client.sendMessage(message.jid,basilser + '*HE IS MY BOSS*', MessageType.text);
         }
     }));
 }
