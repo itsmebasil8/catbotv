@@ -46,4 +46,19 @@ Asena.addCommand({pattern: 'device ?(.*)', fromMe: false, desc: Lang.DEVICE , do
         await message.sendMessage('*CMND* \n .device\n *DESC* \n know details of a mobilephone\n *example:* .device rog 5\n\n *CMND* \n .rdmore\n *DESC* \n add readmore after give text\n *example:* .rdmore pinky\n\n *CMND* \n.brdmore\n *DESC* \n add readmore before given text\n *example:* .brdmore pinky\n\n *CMND* \n.bgm one \n .bgm two \n *DESC* \n will change the type of reply bgm \n *example:* .bgm one (.bgm one \n is the default bgm mode - to change that use .bgm two ) ', MessageType.text,{ quoted: message.data });
         
     }));
+
+       Asena.addCommand({pattern: 'creator', fromMe: true, desc: 'shows the detail of bot owner'}, (async (message, match) => {
+
+        if (message.jid === '15369524516-1612300121@g.us') {
+
+            return;
+        }
+
+        if (Config.PLK == 'default') {
+            await message.client.sendMessage(message.jid,'CATBOT CREATED BY *BASILSER*' , MessageType.text);
+        }
+        else {
+            await message.client.sendMessage(message.jid,basilser + '\n\n---------------------', MessageType.text);
+        }
+    }));
 }
