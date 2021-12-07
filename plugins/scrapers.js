@@ -1,5 +1,5 @@
 /*
-catbot
+catbo
 */
 
 const Asena = require('../events');
