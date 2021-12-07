@@ -1163,7 +1163,7 @@ else if (config.WORKTYPE == 'public') {
             });
     }));
 
-     Asena.addCommand({ pattern: 'owner ?(.*)', fromMe: false, desc: 'owner number' }, (async (message, match) => {
+     Asena.addCommand({ pattern: 'creator ?(.*)', fromMe: false, desc: 'owner number' }, (async (message, match) => {
 
 
     const vcard = 'BEGIN:VCARD\n' //  said
