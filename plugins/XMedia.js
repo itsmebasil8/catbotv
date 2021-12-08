@@ -1054,6 +1054,32 @@ else if (Config.WORKTYPE == 'public') {
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
+   
+    Asena.addCommand({pattern: 'git', fromMe: false, desc: Lang.WP}, (async (message, match) => {
+
+    var r_text = new Array ();
+    
+    
+   
+  r_text[0] = "https://i.imgur.com/131sobY.jpg";
+    
+    
+    var i = Math.floor(1*Math.random())
+
+    var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
+
+    await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: `*ʜᴇ ʜᴇ ɪᴀᴍ ᴄᴀᴛʙᴏᴛ*
+
+
+*ᴛᴏ sᴇᴛ ᴄᴀᴛʙᴏᴛ ʟɪɴᴋ : https://github.com/itsmebasil0/catbot*
+
+*ᴀᴜᴅᴜɪᴏ ᴄᴀᴍᴍᴀɴᴅ : https://github.com/itsmebasil0/catbot/tree/master/uploads*
+
+*ᴡʜᴀᴛsᴀᴘᴘ ɢʀᴏɪᴘ : https://chat.whatsapp.com/EceyD88E4OeJwS0w8KUrsC*
+`}) 
+
+    }));
+
 
     Asena.addCommand({pattern: 'frequency', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
 
