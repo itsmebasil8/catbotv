@@ -135,10 +135,6 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
         console.log(
             chalk.green.bold('catbot working 😺')
         );
-         await conn.sendMessage(
-            conn.user.jid,
-            '*Bot Started*',
-            MessageType.text
     });
     
     conn.on('chat-update', async m => {
