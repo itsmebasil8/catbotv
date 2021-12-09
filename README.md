@@ -32,7 +32,7 @@ Project created by <a href="https://github.com/itsmebasil0">basilser</a> to make
 
 ```
   
-pinky - pinky Userbot is Open Source software open to development. 
+catbot - catbot Userbot is Open Source software open to development. 
 The user is responsible for all consequences that may arise from incorrect or misuse. 
 Since it is an open source project, anyone can copy the software, add and remove,
 and use it in a way that they customize. In addition, plug-in support enables users to 
@@ -70,7 +70,7 @@ bash <(curl -L https://t.ly/tHxh)
 ``` 
 ## Click here to join whatsapp group 
 
-[![hehe](https://i.imgur.com/6gTX8RE.jpg)](https://chat.whatsapp.com/Dg3GUXHpDyiDMCt2GJTyzs)
+[![hehe](https://i.imgur.com/6gTX8RE.jpg)](https://chat.whatsapp.com/EceyD88E4OeJwS0w8KUrsC)
 
 ## F.A.Q
 Answer a few frequently asked questions;
