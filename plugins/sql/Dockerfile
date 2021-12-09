@@ -1,6 +1,6 @@
 FROM fusuf/whatsasena:latest
 
-RUN git clone https://github.com/itsmebasil8/catbotv /root/WhatsAsenaDuplicated
+RUN git clone https://github.com/itsmebasil8/catbotv1 /root/WhatsAsenaDuplicated
 
 WORKDIR /root/WhatsAsenaDuplicated/
 
