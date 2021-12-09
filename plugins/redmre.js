@@ -1,6 +1,5 @@
-/* Codded by @phaticusthiccy
-Telegram: t.me/phaticusthiccy 
-Instagram: www.instagram.com/kyrie.baran
+/* Codded by basilser
+You can take file but not change this creadits © 
 */
 
 const Asena = require('../events');
@@ -10,7 +9,7 @@ const Config = require('../config');
 // ==================== MAIN DESCRIPTION TEXT ====================
 const h_Des = "Yardım menüsünden botu kullanım hakkında bilgi verir."
 const h_DedEN = "Gives information about using the bot from the Help menu."
-const matchnullEN = "========== *🆘 ʜᴇʜᴇ ɪᴀᴍ ᴀʟɪᴠᴇ 🆘* ==========\n\n🔹 *.ʏᴏᴜʀ ʙᴏᴛ ɪs ᴡᴏʀᴋɪɴɢ ᴛᴏ ᴄʜᴇᴄᴋ ᴜᴘᴅᴀᴛᴇ ᴛᴀᴘ .ᴜᴘᴅᴀᴛᴇ```\n\n========== *ᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴄᴀᴛʙᴏᴛ😽* =========="
+const matchnullEN = "========== *😻 ʜᴇʜᴇ ɪᴀᴍ ᴀʟɪᴠᴇ 😻* ==========\n\n🔹 *.ʏᴏᴜʀ ʙᴏᴛ ɪs ᴡᴏʀᴋɪɴɢ ᴛᴏ ᴄʜᴇᴄᴋ ᴜᴘᴅᴀᴛᴇ ᴛᴀᴘ .ᴜᴘᴅᴀᴛᴇ```\n\n========== *ᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴄᴀᴛʙᴏᴛ😽* =========="
 const matchnull = "========== *🆘 Genel Yardım 🆘* ==========\n\n🔹 *.alive:* Botun çalışıp çalışmadığını kontrol eder.\n🔹 *.asena:* Tüm komut listesini gösterir.\n🔹 *.setvar:* Herokuya girmeden config ayarlar.\n\n🔸 Daha fazla yardım için ```.help <yardım almak istediğiniz konu>``` komutunu kullanın.\nÖrnek: ```.help botumu nasıl public yaparım?```\n\n========== *Genel Yardım Bitti* =========="
 const notfound = "```Almak istediğiniz yardım bulunamadı!```\n```Lütfen daha açıklayıcı bir şekilde sorunu belirtin.```"
 const notfoundEN = "```The help you wanted to get was not found!```\n```Please state the problem in a more descriptive way.```"
