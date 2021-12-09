@@ -3,6 +3,7 @@ You can take file but not change this creadits ©
 */
 
 const Asena = require('../events');
+const Catbot = require('../catbot');
 const {MessageType, MessageOptions} = require('@adiwajshing/baileys');
 const Config = require('../config');
 
